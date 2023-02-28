@@ -1,0 +1,29 @@
+Installing:
+    write in terminal: composer install
+    rename .env.example to .env
+    write on terminal: php artisan migrate
+    and for start server write: php artisan serve
+APIS:
+- /signin [POST] - email and password is required
+- /signup [POST]  -email,password,phone,name is required
+- /info [GET] - berear token is required
+- /info [PUT] -token is required
+- /latency [GET]
+- /token [DELETE] - token is required
+
+For easy check all api functions wroted in app/http/Controllers/Api
+
+****************************************************************
+
+About second task:
+its on main page of site, but i write it here too:
+
+<?php
+    $list = [[[1,2],3],[4],[5,6],[7,[8,9]]];
+    //i try to write recursion for this, but without loop this is unreal, and after i remember this perfect standart function :D
+    array_walk_recursive($list, function($v) use (&$flat){ $flat[] = $v; });
+
+    echo '<pre>';
+    print_r($flat);
+    echo '</pre>';
+?>
